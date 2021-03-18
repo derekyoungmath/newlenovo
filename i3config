@@ -82,7 +82,7 @@ bindsym $mod+shift+backslash resize set 800 500
 # change focus between tiling / floating windows
 bindsym $mod+a focus mode_toggle
 
-# bindsym $mod+comma exec $term -T 'xjzmailapt' -e $HOME/shell/tmux.zsh i3_block Mapt, mode "default"
+# bindsym $mod+comma exec $term -T 'xjzmailapt' -e $HOME/.dotfiles/tmux.zsh i3_block Mapt, mode "default"
 bindsym $mod+period exec $term -T 'xjzmailtask' -e nvim $HOME/todo/todo.md, mode "default"
 
 # focus the parent container
@@ -232,55 +232,55 @@ mode "$openwin" {
 	# terminal
 	bindsym b exec $term -e $HOME/shell/bltmux.zsh, mode "default",fullscreen toggle
 	# calcurse
-	bindsym c exec $term -T xjzCalcurse -e $HOME/shell/tmux.zsh i3_window Calcurse, mode "default"
+	bindsym c exec $term -T xjzCalcurse -e $HOME/.dotfiles/tmux.zsh i3_window Calcurse, mode "default"
 	# manpage
-	bindsym shift+m exec $term -T xjzMan -e $HOME/shell/tmux.zsh i3_block Man, mode "default"
+	bindsym shift+m exec $term -T xjzMan -e $HOME/.dotfiles/tmux.zsh i3_block Man, mode "default"
 	# Bibtex/papis
-	bindsym r exec $term -T xjzRefs -e $HOME/shell/tmux.zsh i3_block Refs, mode "default"
-	bindsym shift+r exec $term -T xjzright -e $HOME/shell/tmux.zsh i3_block Refsup, mode "default"
-	# bindsym r exec $term -T xjzright -e $HOME/shell/tmux.zsh i3_block Papis, mode "default"
+	bindsym r exec $term -T xjzRefs -e $HOME/.dotfiles/tmux.zsh i3_block Refs, mode "default"
+	bindsym shift+r exec $term -T xjzright -e $HOME/.dotfiles/tmux.zsh i3_block Refsup, mode "default"
+	# bindsym r exec $term -T xjzright -e $HOME/.dotfiles/tmux.zsh i3_block Papis, mode "default"
 	# books
-	bindsym w exec $term -T xizBooks -e $HOME/shell/tmux.zsh i3_block Books, mode "default"
-	bindsym shift+w exec $term -T xizBooks -e $HOME/shell/tmux.zsh i3_block SendFile, mode "default"
+	bindsym w exec $term -T xizBooks -e $HOME/.dotfiles/tmux.zsh i3_block Books, mode "default"
+	bindsym shift+w exec $term -T xizBooks -e $HOME/.dotfiles/tmux.zsh i3_block SendFile, mode "default"
 	# vim
-	bindsym v exec $term -T xjzMyvim -e $HOME/shell/tmux.zsh i3_block Myvim, mode "default"
-	# bindsym v exec $term3 -T xjzMyvim -e $HOME/shell/tmux.zsh i3_block Myvim, mode "default"
+	bindsym v exec $term -T xjzMyvim -e $HOME/.dotfiles/tmux.zsh i3_block Myvim, mode "default"
+	# bindsym v exec $term3 -T xjzMyvim -e $HOME/.dotfiles/tmux.zsh i3_block Myvim, mode "default"
 	# vimiv
-	bindsym shift+v exec $term -T xjzNvim -e $HOME/shell/tmux.zsh i3_block Nvim, mode "default"
+	bindsym shift+v exec $term -T xjzNvim -e $HOME/.dotfiles/tmux.zsh i3_block Nvim, mode "default"
 	# kee
-	bindsym y exec $term -T xjzKeys -e $HOME/shell/tmux.zsh i3_block Keys, mode "default"
+	bindsym y exec $term -T xjzKeys -e $HOME/.dotfiles/tmux.zsh i3_block Keys, mode "default"
 	# jour
-	bindsym j exec $term -T xjzJour -e $HOME/shell/tmux.zsh i3_block Jour, mode "default"
+	bindsym j exec $term -T xjzJour -e $HOME/.dotfiles/tmux.zsh i3_block Jour, mode "default"
 	# terminal
-	bindsym o exec $term -T xjzMyterm -e $HOME/shell/tmux.zsh i3_block Myterm, mode "default"
-	bindsym shift+o exec $term -T xjzleft -e $HOME/shell/tmux.zsh i3_block nTerminal, mode "default"
+	bindsym o exec $term -T xjzMyterm -e $HOME/.dotfiles/tmux.zsh i3_block Myterm, mode "default"
+	bindsym shift+o exec $term -T xjzleft -e $HOME/.dotfiles/tmux.zsh i3_block nTerminal, mode "default"
 	# ipython
-	bindsym p exec $term -T xjzIpython -e $HOME/shell/tmux.zsh i3_block Ipython, mode "default"
+	bindsym p exec $term -T xjzIpython -e $HOME/.dotfiles/tmux.zsh i3_block Ipython, mode "default"
 	# newsboat
-	bindsym n exec $term -T xjznewsboat -e $HOME/shell/tmux.zsh i3_window News, mode "default"
+	bindsym n exec $term -T xjznewsboat -e $HOME/.dotfiles/tmux.zsh i3_window News, mode "default"
 	# music
-	# bindsym a exec $term -T xjzMusic -e $HOME/shell/tmux.zsh i3_block Music, mode "default"
+	# bindsym a exec $term -T xjzMusic -e $HOME/.dotfiles/tmux.zsh i3_block Music, mode "default"
 	# vifm
-	bindsym period exec $term -T xjzVifm -e $HOME/shell/tmux.zsh i3_block Vifm, mode "default"
+	bindsym period exec $term -T xjzVifm -e $HOME/.dotfiles/tmux.zsh i3_block Vifm, mode "default"
 	# ledger
-	bindsym l exec $term -T xjzLedger -e $HOME/shell/tmux.zsh i3_window Ledger, mode "default"
-	bindsym shift+l exec $term  -e $HOME/shell/tmux.zsh i3_block LCommand, mode "default"
+	bindsym l exec $term -T xjzLedger -e $HOME/.dotfiles/tmux.zsh i3_window Ledger, mode "default"
+	bindsym shift+l exec $term  -e $HOME/.dotfiles/tmux.zsh i3_block LCommand, mode "default"
 	# firefox
 	bindsym f exec firefox, mode "default"
 	# py
-	bindsym s exec $term -T xjzScripts -e $HOME/shell/tmux.zsh i3_window Scripts, mode "default"
-	bindsym g exec $term -T xjzSage -e $HOME/shell/tmux.zsh i3_window Sage, mode "default"
+	bindsym s exec $term -T xjzScripts -e $HOME/.dotfiles/tmux.zsh i3_window Scripts, mode "default"
+	bindsym g exec $term -T xjzSage -e $HOME/.dotfiles/tmux.zsh i3_window Sage, mode "default"
 	# sage
 	bindsym slash exec $term -e $HOME/shell/stmux.zsh, mode "default"
 	# mail
-	bindsym m exec $term -T xjzMail -e $HOME/shell/tmux.zsh i3_window Mail, mode "default"
+	bindsym m exec $term -T xjzMail -e $HOME/.dotfiles/tmux.zsh i3_window Mail, mode "default"
 	bindsym shift+m exec $term -T xjzgmail_m3tt -e $HOME/shell/mmtmux.zsh, mode "default"
 	# tex
-	bindsym semicolon exec $term -T xjzTex -e $HOME/shell/tmux.zsh i3_window Tex, mode "default"
+	bindsym semicolon exec $term -T xjzTex -e $HOME/.dotfiles/tmux.zsh i3_window Tex, mode "default"
 	# html
-	bindsym h exec $term -T xjzMyhtml -e $HOME/shell/tmux.zsh i3_window Myhtml, mode "default"
+	bindsym h exec $term -T xjzMyhtml -e $HOME/.dotfiles/tmux.zsh i3_window Myhtml, mode "default"
 	# dech
-	bindsym i exec $term -T xjzDech -e $HOME/shell/tmux.zsh i3_window Dech, mode "default"
+	bindsym i exec $term -T xjzDech -e $HOME/.dotfiles/tmux.zsh i3_window Dech, mode "default"
 	# qutebrowser
 	bindsym shift+q exec qutebrowser --target tab, mode "default"
 	# qutebrowser
@@ -406,18 +406,18 @@ bindsym $mod+x mode "$mode_net"
 # mod n
 set $neomuttkeys [ neomuttkeys: ]
 mode "$neomuttkeys" {
-	bindsym 8 exec $HOME/shell/tmux.zsh i3_mutt_keys tagtemp, mode "default"
-	bindsym j exec $HOME/shell/tmux.zsh i3_mutt_keys gotoinbox, mode "default"
-	bindsym s exec $term -T 'xjzsearchmail' -e $HOME/shell/tmux.zsh i3_block Msearch, mode "default"
-	# bindsym v exec $term -T xjzMyvim -e $HOME/shell/tmux.zsh i3_block Myvim, mode "default"
-	bindsym i exec $term -T 'xjzsearchmail' -e $HOME/shell/tmux.zsh i3_block Minbox, mode "default"
+	bindsym 8 exec $HOME/.dotfiles/tmux.zsh i3_mutt_keys tagtemp, mode "default"
+	bindsym j exec $HOME/.dotfiles/tmux.zsh i3_mutt_keys gotoinbox, mode "default"
+	bindsym s exec $term -T 'xjzsearchmail' -e $HOME/.dotfiles/tmux.zsh i3_block Msearch, mode "default"
+	# bindsym v exec $term -T xjzMyvim -e $HOME/.dotfiles/tmux.zsh i3_block Myvim, mode "default"
+	bindsym i exec $term -T 'xjzsearchmail' -e $HOME/.dotfiles/tmux.zsh i3_block Minbox, mode "default"
 	# bindsym i exec --no-startup-id $term -T 'xjzsearchmail' -e ~/shell/neomutt_tags.zsh not_archived, mode "default"
 	bindsym t exec --no-startup-id $term -T 'xjzsearchmail' -e ~/shell/neomutt_tags.zsh edit_tags, mode "default"
 	# bindsym a exec --no-startup-id $term -T 'xjzsearchmail' -e $HOME/shell/mutttagvim.zsh openaptfile, mode "default"
 	bindsym comma exec $term -T 'xjzmailapt' -e $HOME/shell/mutttagvim.zsh openaptfile, mode "default"
 	bindsym r exec  ~/shell/neomutt_tags.zsh run_query, mode "default"
 	bindsym f exec --no-startup-id $term -T 'xjzsearchmail' -e ~/shell/neomutt_tags.zsh fzf_filter, mode "default"
-	# bindsym a exec $HOME/shell/tmux.zsh i3_mutt_keys addapt, mode "default"
+	# bindsym a exec $HOME/.dotfiles/tmux.zsh i3_mutt_keys addapt, mode "default"
 	# back to normal: Enter or Escape
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
@@ -428,26 +428,26 @@ bindsym $mod+n mode "$neomuttkeys"
 set $tmuxkeys [ tmuxkeys: ]
 mode "$tmuxkeys" {
 	# Navigation
-	bindsym 1 exec $HOME/shell/tmux.zsh i3_tmux_keys switchpane 1, mode "default"
-	bindsym 2 exec $HOME/shell/tmux.zsh i3_tmux_keys switchpane 2, mode "default"
-	bindsym 3 exec $HOME/shell/tmux.zsh i3_tmux_keys switchpane 3, mode "default"
-	bindsym 4 exec $HOME/shell/tmux.zsh i3_tmux_keys switchpane 4, mode "default"
-	bindsym 5 exec $HOME/shell/tmux.zsh i3_tmux_keys switchpane 5, mode "default"
+	bindsym 1 exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys switchpane 1, mode "default"
+	bindsym 2 exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys switchpane 2, mode "default"
+	bindsym 3 exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys switchpane 3, mode "default"
+	bindsym 4 exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys switchpane 4, mode "default"
+	bindsym 5 exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys switchpane 5, mode "default"
 
-	bindsym h exec $HOME/shell/tmux.zsh i3_tmux_keys switchpane 5, mode "default"
-	bindsym j exec $HOME/shell/tmux.zsh i3_tmux_keys switchpane 5, mode "default"
-	bindsym k exec $HOME/shell/tmux.zsh i3_tmux_keys switchpane 5, mode "default"
-	bindsym l exec $HOME/shell/tmux.zsh i3_tmux_keys switchpane 5, mode "default"
+	bindsym h exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys switchpane 5, mode "default"
+	bindsym j exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys switchpane 5, mode "default"
+	bindsym k exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys switchpane 5, mode "default"
+	bindsym l exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys switchpane 5, mode "default"
 	# Open
-	bindsym c exec $HOME/shell/tmux.zsh i3_tmux_keys openwindow, mode "default"
-	bindsym v exec $HOME/shell/tmux.zsh i3_tmux_keys openvim, mode "default"
-	bindsym f exec $HOME/shell/tmux.zsh i3_tmux_keys openvifm, mode "default"
-	bindsym a exec $HOME/shell/tmux.zsh i3_tmux_keys addappointment, mode "default"
-	bindsym u exec $HOME/shell/tmux.zsh i3_tmux_keys fzfurl, mode "default"
+	bindsym c exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys openwindow, mode "default"
+	bindsym v exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys openvim, mode "default"
+	bindsym f exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys openvifm, mode "default"
+	bindsym a exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys addappointment, mode "default"
+	bindsym u exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys fzfurl, mode "default"
 
 	# Kill 
-	bindsym x exec $HOME/shell/tmux.zsh i3_tmux_keys killpane, mode "default"
-	bindsym z exec $HOME/shell/tmux.zsh i3_tmux_keys killsession, mode "default"
+	bindsym x exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys killpane, mode "default"
+	bindsym z exec $HOME/.dotfiles/tmux.zsh i3_tmux_keys killsession, mode "default"
 	# back to normal: Enter or Escape
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
