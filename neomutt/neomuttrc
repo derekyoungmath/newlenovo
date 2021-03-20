@@ -1,0 +1,19 @@
+set mbox_type = Maildir
+set folder = "~/.Mail"
+set spoolfile = "~/.Mail"
+set autoedit = yes
+set mailcap_path = ~/.config/neomutt/mailcap
+
+virtual-mailboxes "main" "notmuch://?query=tag:inbox and "(folder:/hmail/)" and date:..today"
+virtual-mailboxes "sent" "notmuch://?query=tag:sent and "(folder:/hmail/)" and date:..today"
+
+folder-hook hmail/* source ~/.config/neomutt/accounts/hmail
+folder-hook Personal/* source ~/.config/neomutt/accounts/personal
+folder-hook dmail/* source ~/.config/neomutt/accounts/dmail
+folder-hook dymail/* source ~/.config/neomutt/accounts/dymail
+folder-hook family/* source ~/.config/neomutt/accounts/family
+# folder-hook Gmail/* source ~/.config/neomutt/accounts/gmail
+
+source ~/.config/neomutt/options
+source ~/.config/neomutt/colors
+source ~/.config/neomutt/bindings

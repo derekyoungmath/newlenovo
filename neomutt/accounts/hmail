@@ -1,0 +1,17 @@
+set realname = "Derek Young"
+set from = "dyoung@mtholyoke.edu"
+set sendmail = "/usr/bin/msmtp -a hmail"
+set mbox = "+/hmail/[Gmail]/All Mail"
+set postponed = "+hmail/Drafts"
+set record = "+hmail/Sent"
+set mail_check = 0
+set envelope_from=yes
+
+color tree      green            default         # the "tree" display ofthreads within the folder index
+color index     green default  '~N'
+color status    green          default
+color tree    green          default
+color indicator bold yellow           default           # indicator for the "current message"
+set status_format       = "-%r- %f %m New: %n%?d? Del: %d?%?t? Tag: %t?%?l? %l? %?p?---- .: %p waiting to send :. ?--%>- %P ---[dyoung]---"
+
+set attach_format = "%I %4n %T%.40d%> [dyoung][%.7m/%.10M, %s]"

@@ -1,0 +1,12 @@
+application/octet-stream ; echo %s "can be anything..."                    ; copiousoutput;
+# text/html		 ; qutebrowser %s; nametemplate=%s.html; copiousoutput;
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+application/pdf          ; /usr/bin/zathura %s                             ; copiousoutput
+application/vnd.openxmlformats-officedocument.wordprocessingml.document          ; /usr/bin/libreoffice %s                             ; copiousoutput
+application/msword          ; /usr/bin/libreoffice %s                             ; copiousoutput
+application/openxm          ; /usr/bin/libreoffice %s                             ; copiousoutput
+application/x-tex          ; nvim %s
+image/*                  ; /usr/bin/sxiv %s                              ; copiousoutput
+image/*                  ; /usr/bin/feh %s                              ; copiousoutput
+audio/*                  ; /usr/bin/mplayer %s                             ; copiousoutput
+video/* 		 ; /usr/bin/mplayer %s 				   ; copiousoutput

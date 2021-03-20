@@ -1,0 +1,45 @@
+color status    magenta          default
+color indicator magenta           default           # indicator for the "current message"
+color hdrdefault green default
+color attachment magenta default
+
+color header green default "Date: "
+color header blue default "From: "
+color header magenta default "To: "
+color header magenta default "Cc: "
+color header magenta default "Bcc: "
+color header color166 default "Subject: "
+
+color body blue default "(http|https)://([a-zA-Z0-9\\~\\!\\@\\#\\$\\%\\^\\&amp;\\*\\(\\)\\_\\=\\+\-\\/\\?\\.\\:\\;\\'\\,]*)?"
+
+color quoted green default
+color quoted1 cyan default
+color quoted2 color166 default
+color quoted3 blue default
+color quoted4 green default
+
+color error     red             default         # error messages
+color message   white           default         # message  informationale messages
+color search    white           blue            # search matches found withsearch within the internal pager
+color markers   red             default         # The markers indicate awrapped line hen showing messages with looong lines
+
+color index     color22 default  '~O'
+color index     magenta default  '~T'
+color index     brightred       default '~F'    # Flagged Messages areimportant!
+color index     color162 default    '~D'            # Deleted Mails - use dark
+color progress white red
+
+color attach_headers color22 default "Autoview"
+color attach_headers color22 default "^\\[--"
+color attach_headers color22 default "--]$"
+color attach_headers color22 default "Type: [a-z]+/[a-z0-9\-]+"
+color attach_headers color22 default "Size: [0-9\.]+[KM ]"
+
+color index_tag black color22 "sent"
+color index_tag black magenta "archive"
+color index_tag black red "temp"
+color index_tag black red "done"
+color index_tags green default
+
+tag-transforms "inbox" "i" "sent" "s" "archive" "a" "reservation" "r" "recitation" "m" "bills" "b" "temp" "t" "done" "d"
+tag-formats "inbox" "GI" "sent" "GS" "archive" "GA" "reservation" "GR" "recitation" "GM" "bills" "GB" "temp" "GT" "done" "GD"

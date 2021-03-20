@@ -1,0 +1,66 @@
+set text_flowed=yes
+set move = no
+set include
+set sort = 'threads'
+# set collapse_all
+# set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+ignore "Authentication-Results:"
+unset wait_key
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+alternative_order text/plain text/html *
+auto_view text/html
+set menu_context = 3
+set date_format         = "%a %b %d %y %I:%M%p"
+set pager_format         = "TAGS: %g \n -%Z- %C/%m: %-20.20n   %s%*  -- (%P)"
+set pager_index_lines = 3
+set index_format        = "%3C %Z %X %N %Y%D %e/%E %-20.20t %-25.25F %-65.65s %> | %?GI?%GI& ? %?GS?%GS& ? %?GA?%GA& ? %?GR?%GR& ? %?GM?%GM& ? %?GD?%GD& ?"
+set status_format       = "-%r- %f %m New: %n%?d? Del: %d?%?t? Tag: %t?%?l? %l? %?p?---- .: %p waiting to send :. ?--%>- %P ---[dyoung]---"
+set vfolder_format = "%g"
+set attach_format = "%I %4n %T%.40d%> [dyoung][%.7m/%.10M, %s]"
+
+
+set abort_noattach = ask-yes
+set abort_noattach_regex = "\\<attach(|ed|ments?|ings?|s)\\>"
+set mark_old
+unset markers
+set sig_dashes
+set edit_headers
+set fcc_attach
+set beep_new
+set askcc
+set forward_format = "Fwd: %s"
+set forward_decode
+set attribution = "On %d, %n wrote:"
+set reply_to
+set reverse_name
+set include
+set forward_quote
+set uncollapse_jump
+set reply_with_xorig = "yes"
+unset help
+set pager_index_lines = 10
+set pager_context = 3
+set pager_stop
+set menu_scroll
+set tilde
+set askbcc
+set mark_old=no
+set sidebar_width=25
+set sidebar_short_path 
+set sidebar_visible=no
+
+# Notmuch
+set nm_db_limit = 0
+set nm_exclude_tags = "oldmail"
+set nm_open_timeout = 5
+set nm_query_type = messages
+set nm_record_tags = "sent"
+set nm_unread_tag = unread
+set vfolder_format = "%6n(%6N) %f"
+set virtual_spoolfile = yes
+set nm_query_window_duration=2
+set nm_query_window_timebase="week" # or "hour", "day", "week", "month", "year"
+

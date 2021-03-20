@@ -1,0 +1,15 @@
+set realname = "Derek Young"
+set from = "derekyoungmath@gmail.com"
+set sendmail = "/usr/bin/msmtp -a dmail"
+set mbox = "+/Gmail/[Gmail]/All Mail"
+set postponed = "+/Gmail/[Gmail]/Drafts"
+set mail_check = 0
+set envelope_from=yes
+
+color status    magenta           default
+color tree      magenta            default         # the "tree" display ofthreads within the folder index
+color index     magenta default  '~N'
+color indicator yellow           default           # indicator for the "current message"
+set status_format       = "-%r- %f %m New: %n%?d? Del: %d?%?t? Tag: %t?%?l? %l? %?p?---- .: %p waiting to send :. ?--%>- %P ---[derekyoungmath]---"
+
+set attach_format = "%I %4n %T%.40d%> [dowewas2][%.7m/%.10M, %s]"

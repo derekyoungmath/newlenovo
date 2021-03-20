@@ -1,0 +1,88 @@
+bind index,pager i noop
+# Change email account
+macro index iF "<vfolder-from-query>folder:/hmail/ and tag:m211_s21_1_inbox and date:..now<enter>"
+macro index if "<vfolder-from-query>folder:/hmail/ and tag:m211_s21_1_inbox and date:..now and not tag:archive and not tag:sent and not tag:/:f$/ and not tag:sent<enter>"
+macro index ig "<vfolder-from-query>folder:/hmail/ and tag:m211_s21_1_posts and date:..now and not tag:archive and not tag:sent<enter>"
+macro index ia "<vfolder-from-query>folder:/hmail/ and tag:faculty-a and date:..now and not tag:archive and not tag:sent<enter>"
+macro index id "<vfolder-from-query>folder:/hmail/ and tag:mathstat-d and date:..now and not tag:archive and not tag:sent<enter>"
+macro index ib "<vfolder-from-query>folder:/Personal/ and tag:bills and date:..now and not tag:archive and not tag:sent<enter>"
+macro index ij "<vfolder-from-query>folder:/hmail/ and tag:inbox and date:..now<enter>"
+macro index iw "<vfolder-from-query>folder:/hmail/ and date:0D..now<enter>"
+macro index in "<vfolder-from-query>folder:/hmail/ and tag:template and date:..now<enter>"
+macro index il "<vfolder-from-query>folder:/dmail/ and tag:inbox and date:..now<enter>"
+macro index ik "<vfolder-from-query>folder:/Personal/ and tag:inbox and date:..now<enter>"
+macro index ih "<vfolder-from-query>folder:/dymail/ and tag:inbox and date:..now<enter>"
+macro index io "<vfolder-from-query>folder:/family/ and tag:inbox and date:..now<enter>"
+macro index iP "<print-message>"
+macro index iH "<display-toggle-weed>"
+# tag as Archived
+macro index,pager . "<modify-labels>+archive -inbox -unread<enter>"        
+macro index,pager ie "<modify-labels>+modify<enter><shell-escape>/home/dowewas2/shell/modifytags.py modify_tags<enter><tag-pattern>.<enter><modify-labels>-modify<enter><untag-pattern>.<enter>"
+macro index,pager it "<modify-labels>+modify<enter><shell-escape>/home/dowewas2/shell/modifytags.py modify_tags --edit_tag=True<enter><tag-pattern>.<enter><modify-labels>-modify<enter><untag-pattern>.<enter>"
+
+macro index p "<search-opposite>"
+bind index - collapse-thread
+bind index _ collapse-all
+bind index = pipe-message
+
+bind editor <Tab> complete-query
+bind editor ^T complete
+
+bind pager k previous-line
+bind pager j next-line
+bind pager G bottom
+bind index R reply
+bind attach <return> view-mailcap
+
+bind index \ck sidebar-prev
+bind index \cj sidebar-next
+bind index \cl sidebar-open
+bind pager K previous-undeleted
+bind pager J next-undeleted
+macro index,pager \ci '<enter-command>toggle sidebar_visible<enter>'
+
+bind index,pager y modify-labels
+
+
+# open a different virtual folder
+macro index,pager \' "<change-vfolder>Inbox\n"
+# macro index,pager \; "<change-vfolder>Today\n"
+macro index,pager \ej "<change-vfolder>main\n"
+macro index,pager is "<limit>"
+# Limit view to current thread
+bind index <esc>L limit-current-thread
+# read entire thread of the current message
+bind index,pager + entire-thread
+# generate virtual folder from query
+bind index,pager I vfolder-from-query
+macro index \\\\ "<vfolder-from-query>folder:/hmail/ and " "Search mailbox"
+macro index \\| "<vfolder-from-query>" "Search mailbox"
+macro index | "<vfolder-from-query> date:..now " "Search mailbox"
+# generate virtual folder from query with time window
+macro index,pager < "<vfolder-window-backward>"
+macro index,pager > "<vfolder-window-forward>"
+macro index,pager X "<change-vfolder>vim\n"
+macro index,pager x "<pipe-message>/home/dowewas2/shell/mutttagvim.zsh addapt<enter>"
+# macro index,pager x "<pipe-message>/home/dowewas2/shell/mutttagvim.zsh addapt<enter>"
+macro index,pager S "<pipe-message>/home/dowewas2/shell/mutttagvim.zsh searchmail<enter>"
+macro index,pager A "<pipe-message>/home/dowewas2/shell/neomutt_tags.zsh add_contact<enter>"
+macro index,pager * "<pipe-message>/home/dowewas2/shell/neomutt_tags.zsh filter_sender hmail<enter><enter>"
+macro index,pager \ef "<sync-mailbox><shell-escape>mbsync -a && $HOME/shell/notmuch_new.zsh index_all<enter>"
+
+
+bind index,pager @ compose-to-sender
+bind index \, tag-entry
+bind pager h exit
+bind pager l exit
+bind index h display-message
+bind index l display-message
+
+bind index J next-line
+bind index K previous-line
+bind index H first-entry
+bind index L last-entry
+
+macro attach W <save-entry><kill-line>/home/dowewas2/work/Recitations/f18_math_165/quiz
+macro attach S <save-entry><kill-line>/home/dowewas2/Pictures/anans_bananas/
+macro attach P <attach-file><kill-line>/home/dowewas2/Downloads/
+macro attach 'V' "<pipe-entry>cat >~/.cache/mutt/mail.html && qutebrowser ~/.cache/mutt/mail.html && rm ~/.cache/mutt/mail.html<enter>"

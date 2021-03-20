@@ -1,0 +1,14 @@
+set realname = "Derek Young"
+set from = "young13@stolaf.edu"
+set sendmail = "/usr/bin/msmtp -a smail"
+set mbox = "+/smail/[Gmail]/All Mail"
+set postponed = "+smail/Drafts"
+set record = "+smail/Sent"
+set mail_check = 0
+set envelope_from=yes
+
+color status    magenta          default
+color indicator magenta           default           # indicator for the "current message"
+set status_format       = "-%r- %f %m New: %n%?d? Del: %d?%?t? Tag: %t?%?l? %l? %?p?---- .: %p waiting to send :. ?--%>- %P ---[young13]---"
+
+set attach_format = "%I %4n %T%.40d%> [young13][%.7m/%.10M, %s]"

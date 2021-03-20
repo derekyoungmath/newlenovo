@@ -1,0 +1,14 @@
+set realname = "Derek Young"
+set from = "dyoung.math@gmail.com"
+set sendmail = "/usr/bin/msmtp -a dymail"
+set mbox = "+/dymail/[Gmail]/All Mail"
+set postponed = "+dymail/Drafts"
+set record = "+dymail/Sent"
+set mail_check = 0
+set envelope_from=yes
+
+color status    cyan           default
+color indicator cyan           default           # indicator for the "current message"
+set status_format       = "-%r- %f %m New: %n%?d? Del: %d?%?t? Tag: %t?%?l? %l?  ?p?---- .: %p waiting to send :. ?--%>- %P ---[dyoung.math]---"
+
+set attach_format = "%I %4n %T%.40d%> [dyoung.math][%.7m/%.10M, %s]"
