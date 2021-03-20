@@ -1,0 +1,60 @@
+IMAPAccount dmail
+Host imap.gmail.com
+User derekyoungmath@gmail.com
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.password-store/passnew.gpg"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore dmail-remote
+Account dmail
+
+MaildirStore dmail-local
+Subfolders Verbatim
+Path ~/.Mail/dmail/
+Inbox ~/.Mail/dmail/Inbox
+
+Channel sync-dmail-default
+Far :dmail-remote:
+Near :dmail-local:
+Patterns "INBOX"
+Create Near
+
+Channel sync-dmail-sent
+Far :dmail-remote:"[Gmail]/Sent Mail"
+Near :dmail-local:sent
+Create Near
+
+IMAPAccount family
+Host imap.gmail.com
+User dowewas8@gmail.com
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.password-store/common.gpg"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore family-remote
+Account family
+
+MaildirStore family-local
+Subfolders Verbatim
+Path ~/.Mail/family/
+Inbox ~/.Mail/family/Inbox/
+
+Channel family-default
+Far :family-remote:
+Near :family-local:Inbox
+Create Both
+SyncState *
+
+Channel family-sent
+Far :family-remote:"[Gmail]/Sent Mail"
+Near :family-local:Sent
+Create Both
+SyncState *
+
+Group dmail
+Channel sync-dmail-default
+Channel sync-dmail-sent
+
+Group family
+Channel family-default
+Channel family-sent
